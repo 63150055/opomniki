@@ -1,6 +1,14 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function() { //ko jo naložimo izvedemo funkcijo
 	//stran nalozena
-		
+	
+	//izvedi prijavo
+	var izvediPrijavo = function(){
+		var uporabnik = document.querySelector("#uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML = uporabnik;
+		document.querySelector(".pokrivalo").style.visibility = "hidden";
+	}
+	document.querySelector("#prijavniGumb").addEventListener("click",izvediPrijavo);
+	
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
